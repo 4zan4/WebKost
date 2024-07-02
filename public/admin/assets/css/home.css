@@ -1,0 +1,161 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+#hiro{
+    background: linear-gradient(rgba(70, 68, 68, 0.432), rgba(0, 0, 0, 0.815)), url('/assets/Image/library-img.jpg') center/cover no-repeat; 
+    flex-direction: column;
+    background-size: cover;
+}
+.small-logo {
+    width: 50px; 
+    height: auto; 
+    margin-top: -30px;
+}
+
+.navbar {
+    background-color: #0e2238; 
+    color: #fff; 
+    padding: 15px 0; 
+    justify-content: center;
+    align-items: center;
+}
+.navbar-toggler{
+    color: #fff;
+    border-color: #fff;
+}
+
+.fi {
+    color: #fff;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: 800;
+    position: relative;
+    font-size:30px;
+}
+
+.nav-item .nav-link{
+    color:#fff;
+}
+
+a.nav-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 15px;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+
+.navbar-nav .nav-link:hover  {
+    color: rgba(255, 255, 255, 0.568); 
+    transition: color 0.3s; 
+}
+
+.intros h2 {
+    font-weight: bold; 
+}
+
+/* CSS untuk kartu buku */
+.book .list-group-item {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .book .list-group-item:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book .list-group-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .book .list-group-item .list-group-item-heading {
+    margin-bottom: 10px;
+  }
+  
+  .book .list-group-item .list-group-item-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .book .list-group-item .btn-toolbar {
+    margin-top: 20px;
+  }
+  
+  /* CSS untuk label NEW */
+  .label-new {
+    background-color: #f44336; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 10px; 
+    font-size: 12px; 
+    font-weight: bold; 
+  }
+  
+  /* CSS untuk menyesuaikan ukuran label NEW */
+  @media (max-width: 767px) {
+    .label-new {
+      font-size: 10px;
+      padding: 3px 8px;
+    }
+  }
+  /* CSS untuk mengatur ukuran font pada card buku */
+.book .list-group-item .list-group-item-heading,
+.book .list-group-item .list-group-item-text  {
+  font-size: 16px; 
+}
+
+/* CSS untuk input grup */
+.input-group {
+    width: 400px !important;
+    display: flex; 
+  }
+  
+  /* CSS untuk input pencarian */
+  #searchInput {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+    border: 1px solid #ccc !important; 
+    padding: 10px; 
+    flex-grow: 1; 
+  }
+  
+  /* CSS untuk tombol pencarian */
+  .input-group-append button {
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: -1px; 
+  }
+  
+  /* CSS untuk input pencarian*/
+  #searchInput:focus {
+    outline: none; 
+    border-color: #007bff !important; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5) !important; 
+  }
+  
+#book img {
+    width: 120px;
+    height: 200px;
+    object-fit: cover; 
+}
+  

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="fi fi-rr-apps"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Perpustakaan</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="/index.html" class="sidebar-link">
+                        <i class="fi fi-rr-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/pages/addbook.html" class="sidebar-link">
+                        <i class="fi fi-rr-book-alt"></i>
+                        <span>Add Book Stock</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/pages/addstudent.html" class="sidebar-link">
+                        <i class="fi fi-rr-user-add"></i>
+                        <span>Add Student</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/pages/issuebook.html" class="sidebar-link">
+                        <i class="fi fi-rr-exclamation"></i>
+                        <span>Issue Book</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="/pages/returnbook.html" class="sidebar-link">
+                        <i class="fi fi-rr-refresh"></i>
+                        <span>Return Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="fi fi-rr-shield-check"></i>
+                        <span>Auth</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="/pages/login.html" class="sidebar-link">Login</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/pages/register.html" class="sidebar-link">Register</a>
+                        </li>
+                    </ul>
+                </li>   
+            </ul>
+            <div class="sidebar-footer">
+                <a href="/pages/login.html" class="sidebar-link">
+                    <i class="fi fi-rr-exit"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-4 py-3">
+                <form action="#" class="d-none d-sm-inline-block">
+
+                </form>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="/assets/Image/account.png" class="avatar img-fluid" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end rounded">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+           <main class="content px-5 py-4">
+            <h3 class="fw-bold fs-4 mb-3">List of Book Borrowers</h3>
+            <div class="pb-3">
+              <form class="d-flex" action="" method="get">
+                  <input class="form-control me-1" type="search" name="katakunci" value="{{ Request::get('katakunci') }}" placeholder="Masukkan kata kunci" aria-label="Search">
+                  <button class="btn btn-secondary" type="submit">Cari</button>
+              </form>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Student ID</th>
+                          <th>ID Member</th>
+                          <th>Class</th>
+                          <th>Phone Number</th>
+                          <th>Address</th>
+                          <th>Books Borrowed</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Jacob</td>
+                          <td>STU12345</td>
+                          <td>ID123</td>
+                          <td>12A</td>
+                          <td>1234567890</td>
+                          <td>123 Main St</td>
+                          <td class="text-danger">3 books</td>
+                          <td>
+                            <label class="badge badge-danger">Overdue</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Messsy</td>
+                          <td>STU54321</td>
+                          <td>ID456</td>
+                          <td>11B</td>
+                          <td>9876543210</td>
+                          <td>456 Elm St</td>
+                          <td class="text-danger">2 books</td>
+                          <td>
+                            <label class="badge badge-warning">Due Soon</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>John</td>
+                          <td>STU98765</td>
+                          <td>ID789</td>
+                          <td>10C</td>
+                          <td>5551234567</td>
+                          <td>789 Oak St</td>
+                          <td class="text-success">5 books</td>
+                          <td>
+                            <label class="badge badge-info">Active</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Peter</td>
+                          <td>STU24680</td>
+                          <td>ID135</td>
+                          <td>12A</td>
+                          <td>2223334444</td>
+                          <td>321 Pine St</td>
+                          <td class="text-success">1 book</td>
+                          <td>
+                            <label class="badge badge-success">Returned</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Dave</td>
+                          <td>STU13579</td>
+                          <td>ID246</td>
+                          <td>11B</td>
+                          <td>7778889999</td>
+                          <td>654 Cedar St</td>
+                          <td class="text-success">4 books</td>
+                          <td>
+                            <label class="badge badge-warning">Due Soon</label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+           </main> 
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
